@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+venv/
+.venv/
+
+# Local DB
+*.db
+*.sqlite
+*.sqlite3
+
+# Env
+.env
+.env.local
+*.env
+
+# Node
+node_modules/
+dist/
+build/
+
+# Playwright artifacts
+frontend/playwright-report/
+frontend/test-results/
+frontend/blob-report/
+frontend/playwright/.cache/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/

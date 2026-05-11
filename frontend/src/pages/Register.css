@@ -1,0 +1,25 @@
+.register-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #065f46;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.login-footer-text {
+  margin: 20px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.login-footer-link {
+  color: var(--accent, #2563eb);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-footer-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,129 @@
+.shop-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.shop-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  z-index: 2;
+}
+
+.shop-card-media {
+  aspect-ratio: 4 / 3;
+  background: var(--bg);
+  overflow: hidden;
+  position: relative;
+}
+
+.shop-card-wishlist {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 999px;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 180ms ease, color 180ms ease, background 180ms ease,
+    box-shadow 180ms ease;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.shop-card-wishlist:hover {
+  transform: scale(1.08);
+  color: #f43f5e;
+  background: white;
+}
+
+.shop-card-wishlist.is-active {
+  color: #f43f5e;
+  background: white;
+}
+
+.shop-card-wishlist svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: fill 180ms ease;
+}
+
+.shop-card-wishlist.is-active svg {
+  fill: currentColor;
+}
+
+.shop-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.shop-card-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.shop-card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.shop-card-desc {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.shop-card-footer {
+  margin-top: auto;
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.shop-card-price {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.shop-card-cta {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+.shop-card-cta:disabled {
+  background: var(--text-muted);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
