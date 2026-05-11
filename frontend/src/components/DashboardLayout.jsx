@@ -20,8 +20,8 @@ export default function DashboardLayout() {
     <div className="layout">
       <aside className="sidebar">
         <div className="brand">
-          <span className="brand-mark">B</span>
-          <span className="brand-text">ByteBooks</span>
+          <span className="brand-mark">D</span>
+          <span className="brand-text">dvdVault</span>
         </div>
         <nav className="nav">
           {NAV_ITEMS.map((item) => (

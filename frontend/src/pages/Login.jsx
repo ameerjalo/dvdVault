@@ -8,7 +8,7 @@ import "./Register.css";
 export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [email, setEmail] = useState("admin@bytebooks.dev");
+  const [email, setEmail] = useState("admin@dvdvault.dev");
   const [password, setPassword] = useState("AdminPass123!");
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
@@ -33,8 +33,8 @@ export default function Login() {
     <div className="login-shell">
       <div className="card login-card">
         <div className="login-brand">
-          <span className="brand-mark">B</span>
-          <span>ByteBooks</span>
+          <span className="brand-mark">D</span>
+          <span>dvdVault</span>
         </div>
         <h1>Sign in</h1>
         <p className="login-subtitle">Welcome back. Enter your credentials.</p>

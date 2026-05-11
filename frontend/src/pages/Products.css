@@ -106,12 +106,12 @@
   font-weight: 600;
   border-radius: 6px;
   border: 1px solid var(--border);
-  background: #fff;
+  background: var(--surface);
   color: var(--text);
 }
 
 .btn-row:hover {
-  background: var(--bg);
+  background: var(--surface-elevated);
 }
 
 .btn-row.btn-danger {

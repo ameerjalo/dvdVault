@@ -11,8 +11,8 @@ export default function PublicNavbar() {
     <header className="public-nav">
       <div className="public-nav-inner">
         <Link to="/" className="public-brand">
-          <span className="public-brand-mark">B</span>
-          <span className="public-brand-text">ByteBooks</span>
+          <span className="public-brand-mark">D</span>
+          <span className="public-brand-text">dvdVault</span>
         </Link>
         <nav className="public-nav-links">
           <NavLink to="/" end className="public-nav-link">

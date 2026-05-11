@@ -6,35 +6,36 @@ from services import AuthService
 
 
 CATEGORIES = [
-    "Fiction",
-    "Technology",
-    "Business",
+    "Action",
+    "Sci-Fi",
+    "Noir Classics",
+    "Horror",
 ]
 
 PRODUCTS = [
-    ("The Silent Patient", "A psychological thriller about a woman's act of violence.", 14.99, 42, "Fiction",
-     "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80"),
-    ("Where the Crawdads Sing", "A coming-of-age mystery set in the marshes of North Carolina.", 12.50, 30, "Fiction",
-     "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600&q=80"),
-    ("Project Hail Mary", "A lone astronaut must save humanity from extinction.", 16.75, 25, "Fiction",
-     "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80"),
-    ("Clean Code", "A handbook of agile software craftsmanship by Robert C. Martin.", 34.99, 60, "Technology",
-     "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80"),
-    ("Designing Data-Intensive Applications", "Foundations for building reliable, scalable systems.", 49.99, 35, "Technology",
-     "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80"),
-    ("The Pragmatic Programmer", "Your journey to mastery, 20th anniversary edition.", 39.95, 50, "Technology",
-     "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&q=80"),
-    ("Fluent Python", "Clear, concise, and effective programming.", 54.99, 20, "Technology",
-     "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80"),
-    ("Atomic Habits", "An easy & proven way to build good habits and break bad ones.", 18.00, 80, "Business",
-     "https://images.unsplash.com/photo-1589998059171-988d887df646?w=600&q=80"),
-    ("Zero to One", "Notes on startups, or how to build the future.", 22.50, 45, "Business",
-     "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600&q=80"),
-    ("The Lean Startup", "How constant innovation creates radically successful businesses.", 19.99, 38, "Business",
-     "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600&q=80"),
+    ("The Dark Knight", "Christopher Nolan's definitive Batman saga — chaos meets order in Gotham.", 19.99, 42, "Action",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/qJ2tW6WMUDux911r6m7haRef0WH.jpg"),
+    ("Mad Max: Fury Road", "A high-octane post-apocalyptic chase across the Wasteland.", 17.99, 35, "Action",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg"),
+    ("John Wick", "A retired hitman returns for vengeance in stylized, choreographed fury.", 15.99, 50, "Action",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg"),
+    ("Inception", "A thief who steals corporate secrets through dream-sharing technology.", 21.99, 38, "Sci-Fi",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg"),
+    ("Blade Runner 2049", "A young blade runner unearths a long-buried secret in a neon-drenched future.", 22.99, 28, "Sci-Fi",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg"),
+    ("Arrival", "A linguist races to communicate with extraterrestrial visitors before global war erupts.", 18.99, 32, "Sci-Fi",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg"),
+    ("Chinatown", "Roman Polanski's neo-noir masterpiece of corruption in 1930s Los Angeles.", 16.99, 22, "Noir Classics",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dKvWlw1Z8YeYpFmUyDjOpQwSjT9.jpg"),
+    ("Double Indemnity", "Billy Wilder's archetypal noir — insurance fraud, murder, and seductive doom.", 14.99, 18, "Noir Classics",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sNYobgGmpwhpgLh6IcZsAJEDjyV.jpg"),
+    ("Hereditary", "Ari Aster's harrowing family horror that unspools into generational dread.", 19.99, 30, "Horror",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/p9ZUzCyy9wRTDuuQexkQ78R2BgF.jpg"),
+    ("The Shining", "Stanley Kubrick's chilling adaptation of King's haunted-hotel nightmare.", 17.99, 40, "Horror",
+     "https://image.tmdb.org/t/p/w600_and_h900_bestv2/b6ko0IKC8MdYBBPkkA1aBPLe2yz.jpg"),
 ]
 
-ADMIN_EMAIL = "admin@bytebooks.dev"
+ADMIN_EMAIL = "admin@dvdvault.dev"
 ADMIN_PASSWORD = "AdminPass123!"
 
 
@@ -77,7 +78,7 @@ def seed() -> None:
             )
 
         session.commit()
-        print(f"Seeded {len(CATEGORIES)} categories, {len(PRODUCTS)} products.")
+        print(f"Seeded {len(CATEGORIES)} categories, {len(PRODUCTS)} films.")
         print(f"Admin user: {ADMIN_EMAIL} / {ADMIN_PASSWORD}")
 
 

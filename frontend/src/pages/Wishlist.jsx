@@ -46,10 +46,10 @@ export default function Wishlist() {
               <h1 className="wishlist-title">My Wishlist</h1>
               <p className="wishlist-sub">
                 {loading
-                  ? "Loading your saved books…"
+                  ? "Loading your saved films…"
                   : products.length === 0
-                    ? "You haven't saved any books yet."
-                    : `${products.length} saved ${products.length === 1 ? "book" : "books"}`}
+                    ? "You haven't saved any films yet."
+                    : `${products.length} saved ${products.length === 1 ? "film" : "films"}`}
               </p>
             </div>
             <button
@@ -66,9 +66,9 @@ export default function Wishlist() {
 
           {!loading && !error && products.length === 0 && (
             <div className="wishlist-empty">
-              <p>Browse the catalog and tap the heart on any book to save it here.</p>
+              <p>Browse the vault and tap the heart on any film to save it here.</p>
               <Link to="/" className="btn">
-                Browse the catalog
+                Enter the vault
               </Link>
             </div>
           )}

@@ -3,7 +3,7 @@ import api from "../api/client";
 import PublicNavbar from "../components/PublicNavbar";
 import "./Orders.css";
 
-const PLACEHOLDER = "https://placehold.co/120x120/e2e8f0/64748b?text=Book";
+const PLACEHOLDER = "https://placehold.co/120x180/18181b/a1a1aa?text=Film";
 
 const currency = (n) =>
   Number(n ?? 0).toLocaleString(undefined, {

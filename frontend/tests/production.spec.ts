@@ -1,13 +1,13 @@
 import { test, expect } from "@playwright/test";
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "admin@bytebooks.dev";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "admin@dvdvault.dev";
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD ?? "AdminPass123!";
 
-test.describe("ByteBooks production smoke", () => {
-  test("storefront renders at least one product", async ({ page }) => {
+test.describe("dvdVault production smoke", () => {
+  test("storefront renders at least one film", async ({ page }) => {
     await page.goto("/");
 
-    await expect(page.getByRole("heading", { name: /discover books/i })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /films that/i })).toBeVisible();
 
     const catalog = page.locator(".shop-grid");
     await expect(catalog).toBeVisible({ timeout: 15_000 });

@@ -77,27 +77,27 @@ export default function Dashboard() {
     <div>
       <header className="page-header">
         <h1>Dashboard</h1>
-        <p className="page-subtitle">Overview of your ByteBooks store.</p>
+        <p className="page-subtitle">Overview of your dvdVault archive.</p>
       </header>
 
       {error && <div className="dashboard-error">{error}</div>}
 
       <div className="stat-grid">
         <div className="card stat-card">
-          <div className="stat-accent" style={{ background: "#2563eb" }} />
+          <div className="stat-accent" style={{ background: "#e11d48" }} />
           <div className="stat-label">Total Revenue</div>
           <div className="stat-value">
             {loading ? "…" : currency(totalRevenue)}
           </div>
         </div>
         <div className="card stat-card">
-          <div className="stat-accent" style={{ background: "#16a34a" }} />
+          <div className="stat-accent" style={{ background: "#eab308" }} />
           <div className="stat-label">Orders (last 7 days)</div>
           <div className="stat-value">{loading ? "…" : totalOrders}</div>
         </div>
         <div className="card stat-card">
-          <div className="stat-accent" style={{ background: "#f59e0b" }} />
-          <div className="stat-label">Total Products</div>
+          <div className="stat-accent" style={{ background: "#22c55e" }} />
+          <div className="stat-label">Total Films</div>
           <div className="stat-value">
             {productCount === null ? "…" : productCount}
           </div>
@@ -123,14 +123,15 @@ export default function Dashboard() {
                 >
                   <defs>
                     <linearGradient id="salesFill" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#2563eb" stopOpacity={0.35} />
-                      <stop offset="100%" stopColor="#2563eb" stopOpacity={0} />
+                      <stop offset="0%" stopColor="#e11d48" stopOpacity={0.45} />
+                      <stop offset="100%" stopColor="#e11d48" stopOpacity={0} />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                  <XAxis dataKey="label" stroke="#64748b" fontSize={12} />
-                  <YAxis stroke="#64748b" fontSize={12} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
+                  <XAxis dataKey="label" stroke="#a1a1aa" fontSize={12} />
+                  <YAxis stroke="#a1a1aa" fontSize={12} />
                   <Tooltip
+                    contentStyle={{ background: "#18181b", border: "1px solid #27272a", borderRadius: 10, color: "#fafafa" }}
                     formatter={(value, name) =>
                       name === "revenue" ? currency(value) : value
                     }
@@ -138,7 +139,7 @@ export default function Dashboard() {
                   <Area
                     type="monotone"
                     dataKey="revenue"
-                    stroke="#2563eb"
+                    stroke="#e11d48"
                     strokeWidth={2}
                     fill="url(#salesFill)"
                   />
@@ -151,7 +152,7 @@ export default function Dashboard() {
         <section className="card chart-card">
           <header className="chart-header">
             <h2>Stock by Category</h2>
-            <p>Inventory levels across the catalog</p>
+            <p>Inventory levels across the vault</p>
           </header>
           <div className="chart-body">
             {loading ? (
@@ -164,11 +165,14 @@ export default function Dashboard() {
                   data={stockSeries}
                   margin={{ top: 12, right: 12, left: 0, bottom: 0 }}
                 >
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                  <XAxis dataKey="name" stroke="#64748b" fontSize={12} />
-                  <YAxis stroke="#64748b" fontSize={12} />
-                  <Tooltip />
-                  <Bar dataKey="stock" fill="#16a34a" radius={[6, 6, 0, 0]} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
+                  <XAxis dataKey="name" stroke="#a1a1aa" fontSize={12} />
+                  <YAxis stroke="#a1a1aa" fontSize={12} />
+                  <Tooltip
+                    contentStyle={{ background: "#18181b", border: "1px solid #27272a", borderRadius: 10, color: "#fafafa" }}
+                    cursor={{ fill: "rgba(234, 179, 8, 0.08)" }}
+                  />
+                  <Bar dataKey="stock" fill="#eab308" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             )}

@@ -43,12 +43,12 @@ export default function Register() {
     <div className="login-shell">
       <div className="card login-card">
         <div className="login-brand">
-          <span className="brand-mark">B</span>
-          <span>ByteBooks</span>
+          <span className="brand-mark">D</span>
+          <span>dvdVault</span>
         </div>
         <h1>Create your account</h1>
         <p className="login-subtitle">
-          Join ByteBooks to start building your reading list.
+          Join dvdVault to start building your cinematic collection.
         </p>
         <form onSubmit={handleSubmit} className="login-form">
           <label className="field">

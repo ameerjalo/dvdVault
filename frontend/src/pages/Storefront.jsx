@@ -57,17 +57,17 @@ export default function Storefront() {
 
       <section className="hero">
         <div className="hero-inner">
-          <span className="hero-eyebrow">Curated reading, delivered.</span>
+          <span className="hero-eyebrow">A vault of cinema, on disc.</span>
           <h1 className="hero-title">
-            Discover books that <em>change</em> the way you think.
+            Films that <em>refuse</em> to fade.
           </h1>
           <p className="hero-sub">
-            A boutique catalog of fiction, technology, and business titles —
-            handpicked for the relentlessly curious.
+            A curated archive of action, sci-fi, noir, and horror — pressed to
+            physical media for collectors who still believe in the format.
           </p>
           <div className="hero-actions">
             <button className="btn hero-cta" onClick={scrollToCatalog}>
-              Browse the Catalog
+              Enter the Vault
             </button>
             <a
               href="#catalog"
@@ -77,7 +77,7 @@ export default function Storefront() {
                 scrollToCatalog();
               }}
             >
-              View collections →
+              Browse collections →
             </a>
           </div>
         </div>
@@ -87,9 +87,9 @@ export default function Storefront() {
         <div className="catalog-inner">
           <header className="catalog-header">
             <div>
-              <h2 className="catalog-title">The Catalog</h2>
+              <h2 className="catalog-title">The Vault</h2>
               <p className="catalog-sub">
-                {products.length} {products.length === 1 ? "title" : "titles"}{" "}
+                {products.length} {products.length === 1 ? "film" : "films"}{" "}
                 available
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function Storefront() {
               <input
                 className="input catalog-search"
                 type="search"
-                placeholder="Search titles…"
+                placeholder="Search films…"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -117,11 +117,11 @@ export default function Storefront() {
           </header>
 
           {loading ? (
-            <div className="catalog-empty">Loading the shelves…</div>
+            <div className="catalog-empty">Loading the vault…</div>
           ) : error ? (
             <div className="catalog-empty catalog-error">{error}</div>
           ) : products.length === 0 ? (
-            <div className="catalog-empty">No titles match your filters.</div>
+            <div className="catalog-empty">No films match your filters.</div>
           ) : (
             <div className="shop-grid">
               {products.map((p) => (
@@ -134,8 +134,8 @@ export default function Storefront() {
 
       <footer className="public-footer">
         <div className="public-footer-inner">
-          <span>© {new Date().getFullYear()} ByteBooks</span>
-          <span className="public-footer-tag">Crafted for readers.</span>
+          <span>© {new Date().getFullYear()} dvdVault</span>
+          <span className="public-footer-tag">Pressed for collectors.</span>
         </div>
       </footer>
     </div>

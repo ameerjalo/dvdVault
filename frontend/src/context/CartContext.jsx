@@ -7,7 +7,7 @@ import {
   useState,
 } from "react";
 
-const STORAGE_KEY = "bytebooks_cart";
+const STORAGE_KEY = "dvdvault_cart";
 
 const CartContext = createContext(null);
 
