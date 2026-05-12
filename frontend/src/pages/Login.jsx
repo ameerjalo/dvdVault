@@ -8,8 +8,8 @@ import "./Register.css";
 export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [email, setEmail] = useState("admin@dvdvault.dev");
-  const [password, setPassword] = useState("AdminPass123!");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
 
