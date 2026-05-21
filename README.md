@@ -1,4 +1,4 @@
-Project Made by: Ameer Jalo, Youssef Rifai
+
 # dvdVault — Cinema, Preserved
 
 > A production-grade, full-stack e-commerce experience for the discerning collector — a noir-styled storefront, a stateful shopping cart, a personal wishlist, a full order-history flow, and an analytics-driven admin console for end-to-end catalog management.
